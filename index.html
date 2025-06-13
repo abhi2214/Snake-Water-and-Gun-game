@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Water And Gun</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Snake Water and Gun</h2>
+    <p>Choose your option:</p>
+    <button onclick="playgame('snake')">Snake</button>
+    <button onclick="playgame('water')">Water</button>
+    <button onclick="playgame('gun')">Gun</button>
+    <div id="result"></div>
+    <script>
+        function playgame(userchoice) {
+            const choices = ['snake', 'water','gun'];
+            const computer = choices[Math.floor(Math.random() * 3)];
+            let result = '';
+
+            if (userchoice === computer) {
+                result = "Draw";
+            } else if (
+                (userchoice === 'snake' && computer === 'water') ||
+                (userchoice === 'water' && computer === 'gun') ||
+                (userchoice === 'gun' && computer === 'snake')
+            ) {
+                result = 'You win!';
+            } else {
+                result = 'You lose! and computer wins';
+            }
+            document.getElementById('result').innerHTML = `You chose <strong>${userchoice}</strong>.<br>
+         Computer chose <strong>${computer}</strong>.<br>
+         <span>${result}</span>`;
+        }
+
+    </script>
+</body>
+
+</html>
