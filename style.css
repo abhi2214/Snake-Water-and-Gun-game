@@ -3,7 +3,7 @@
       font-family: Arial, sans-serif;
       text-align: center;
       padding-top: 50px;
-      background-color: #f0f8ff;
+      background-color:rgb(109, 171, 226);
     }
      button {
       padding: 10px 20px;
@@ -15,7 +15,7 @@
       /* transition: background 0.3s ease; */
     }
      button:hover {
-      background-color: #ddd;
+      background-color: #ca0b0b;
     }
     #result {
       font-size: 22px;
